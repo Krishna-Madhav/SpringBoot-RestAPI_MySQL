@@ -36,11 +36,11 @@ public class CourseServicImpl implements CourseService {
 
     @Override
     public String deleteCourseById(Integer cid) {
+
         if (courseRepository.existsById(cid)) {
             courseRepository.deleteById(cid);
             return "Successfully deleted";
-        }
-        else {
+        } else {
             return "No record found";
         }
     }
